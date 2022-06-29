@@ -13,5 +13,5 @@ class Teacher < Person
   end
 end
 
-teacher = Teacher.new('Godwin', 31, 'science')
+teacher = Teacher.new('Peter', 31, 'science')
 p teacher

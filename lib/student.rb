@@ -11,9 +11,9 @@ class Student < Person
   end
 end
 
-# student = Student.new('Godwin', 31, 'ruby')
-# p student
-# p student.parent_permission
-# p student.parent_permission = false
-# p student.parent_permission
-# p student.play_hooky
+student = Student.new('Peter', 31, 'ruby')
+p student
+p student.parent_permission
+p student.parent_permission = false
+p student.parent_permission
+p student.play_hooky
