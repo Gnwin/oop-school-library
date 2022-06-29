@@ -1,4 +1,4 @@
-require_relative "person"
+require_relative 'person'
 
 class Teacher < Person
   def initialize(name, age, specialization, parent_permission = true)
@@ -7,6 +7,7 @@ class Teacher < Person
   end
 
   private
+
   def can_use_services?
     true
   end

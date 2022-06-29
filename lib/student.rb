@@ -1,4 +1,4 @@
-require_relative "person"
+require_relative 'person'
 
 class Student < Person
   def initialize(name, age, classroom, parent_permission = true)
@@ -11,11 +11,9 @@ class Student < Person
   end
 end
 
-
 # student = Student.new('Godwin', 31, 'ruby')
 # p student
 # p student.parent_permission
 # p student.parent_permission = false
 # p student.parent_permission
 # p student.play_hooky
-
