@@ -10,10 +10,3 @@ class Student < Person
     "¯\(ツ)/¯"
   end
 end
-
-student = Student.new('Peter', 31, 'ruby')
-p student
-p student.parent_permission
-p student.parent_permission = false
-p student.parent_permission
-p student.play_hooky

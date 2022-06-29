@@ -17,10 +17,9 @@ class Person
     @age >= 18
   end
 
+  public
+
   def can_use_services?
     is_of_age? || parent_permission
   end
 end
-
-person = Person.new('Peter', 31)
-p person.parent_permission
