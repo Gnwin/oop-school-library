@@ -43,7 +43,7 @@ class App
       puts "Created Teacher Name: #{name} Age: #{age} Specialty: #{specialty}"
       @people << teacher
     else
-      student = Student.new(name, age, '', parent_permission = permission)
+      student = Student.new(name, age, '', permission)
       puts "Created Student Name: #{name} Age: #{age} ID: #{student.id}"
       @people << student
     end
