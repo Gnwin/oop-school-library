@@ -28,10 +28,3 @@ class Person < Nameable
     is_of_age? || parent_permission
   end
 end
-
-# p person = Person.new('maximilianus', 22)
-# p person.correct_name
-# p capitalizedPerson = CapitalizeDecorator.new(person)
-# p capitalizedPerson.correct_name
-# p capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-# p capitalizedTrimmedPerson.correct_name
