@@ -48,6 +48,9 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
+
+Lint/MissingSuper:
+  Enabled: false
 Lint/ToEnumArguments:
   Enabled: false
 Lint/AmbiguousBlockAssociation:
