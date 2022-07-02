@@ -1,6 +1,7 @@
 require 'securerandom'
+require_relative 'nameable'
 
-class Person
+class Person < Nameable
   attr_accessor :name, :age, :parent_permission
   attr_reader :id
 
@@ -9,6 +10,10 @@ class Person
     @name = name
     @age = age
     @parent_permission = parent_permission
+  end
+
+  def correct_name
+    @name
   end
 
   private
