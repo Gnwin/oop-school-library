@@ -1,6 +1,9 @@
 # OOP school library
 A Ruby app that records what books are in the library and who borrows them. The app will allow you to: add new students or teachers, add new books and save records of who borrowed a given book and when.
 
+## Prerequisites
+This setup and run procedure assumes you have Ruby installed.
+
 ## Getting Started
 
 - clone the repository `$ git clone https://github.com/Gnwin/oop-school-library.git`
@@ -17,9 +20,6 @@ A Ruby app that records what books are in the library and who borrows them. The 
   - `p capitalizedTrimmedPerson.correct_name`
 
 - and run `$ ruby lib/person.rb`
-
-## Prerequisites
-This setup and run procedure assumes you have Ruby installed.
 
 ## Author
 
