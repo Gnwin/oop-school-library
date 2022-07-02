@@ -8,7 +8,7 @@ This setup and run procedure assumes you have Ruby installed.
 
 - clone the repository `$ git clone https://github.com/Gnwin/oop-school-library.git`
 - go to the project directory `$ cd oop-school-library`
-- switch to branch with `git checkout F/decorate-class`
+- switch to branch with `git checkout f/associations`
 
 - Try these lines of code all together for testing a decorator:
 
