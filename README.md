@@ -10,7 +10,7 @@ This setup and run procedure assumes you have Ruby installed.
 - go to the project directory `$ cd oop-school-library`
 - switch to branch with `git checkout F/decorate-class`
 
-- Try these lines of code for testing a decorator:
+- Try these lines of code all together for testing a decorator:
 
   - `p person = Person.new('maximilianus', 22)`
   - `p person.correct_name`
