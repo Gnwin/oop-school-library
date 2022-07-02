@@ -8,18 +8,7 @@ This setup and run procedure assumes you have Ruby installed.
 
 - clone the repository `$ git clone https://github.com/Gnwin/oop-school-library.git`
 - go to the project directory `$ cd oop-school-library`
-- switch to branch with `git checkout F/decorate-class`
-
-- Try these lines of code all together for testing a decorator:
-
-  - `p person = Person.new('maximilianus', 22)`
-  - `p person.correct_name`
-  - `p capitalizedPerson = CapitalizeDecorator.new(person)`
-  - `p capitalizedPerson.correct_name`
-  - `p capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)`
-  - `p capitalizedTrimmedPerson.correct_name`
-
-- and run `$ ruby lib/person.rb`
+- switch to branch with `git checkout f/associations`
 
 ## Author
 
