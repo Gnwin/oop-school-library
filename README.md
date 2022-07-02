@@ -6,10 +6,17 @@ A Ruby app that records what books are in the library and who borrows them. The 
 - clone the repository `$ git clone https://github.com/Gnwin/oop-school-library.git`
 - go to the project directory `$ cd oop-school-library`
 - switch to branch with `git checkout F/decorate-class`
-- Run any of these commands:
-  `$ ruby lib/person.rb`
-  `$ ruby lib/student.rb`
-  `$ ruby lib/teacher.rb`
+
+- Try these lines of code for testing a decorator:
+
+p person = Person.new('maximilianus', 22)
+p person.correct_name
+p capitalizedPerson = CapitalizeDecorator.new(person)
+p capitalizedPerson.correct_name
+p capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
+p capitalizedTrimmedPerson.correct_name
+
+- and run `$ ruby lib/person.rb`
 
 ## Prerequisites
 This setup and run procedure assumes you have Ruby installed.
