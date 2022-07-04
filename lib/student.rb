@@ -7,10 +7,15 @@ class Student < Person
   def initialize(name, age, classroom, parent_permission = true)
     super(name, age, parent_permission)
     @classroom = classroom
-    classroom.students.push(self) unless classroom.students.include?(self)
   end
 
   def play_hooky
     "¯\(ツ)/¯"
+  end
+
+  def add_rental(rental, book)
+    book.rentals.push(rental) unless book.rentals.include?(rental)
+    @rentals.push(rental)
+    @books.push(book)
   end
 end

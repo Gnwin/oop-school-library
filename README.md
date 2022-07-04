@@ -8,7 +8,8 @@ This setup and run procedure assumes you have Ruby installed.
 
 - clone the repository `$ git clone https://github.com/Gnwin/oop-school-library.git`
 - go to the project directory `$ cd oop-school-library`
-- switch to branch with `git checkout f/associations`
+- switch to branch with `git checkout f/basic-UI`
+- run the command `ruby bin/main.rb`
 
 ## Author
 
