@@ -8,7 +8,14 @@ class Rental
     @date = date
     @book = book
     @person = person
-    book.rentals.push(self) unless book.rentals.include?(self)
-    person.rentals.push(self) unless person.rentals.include?(self)
+
+    p @book
+
+    book.rentals.push(to_hash) unless book.rentals.include?(to_hash)
+    person.rentals.push(to_hash) unless person.rentals.include?(to_hash)
+  end
+
+  def to_hash
+    { date: @date, book: @book, person: @person }
   end
 end
