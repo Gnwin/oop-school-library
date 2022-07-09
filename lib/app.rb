@@ -14,28 +14,22 @@ class App
 
   @@store = Store.new
 
-  @@booksdata = @@store.read('books', "./data/books.json")
+  @@booksdata = @@store.read('books', './data/books.json')
   @@booksdata = [] if @@booksdata.nil?
-  @@booksdata = @@booksdata.map do |book| 
+  @@booksdata = @@booksdata.map do |book|
     Book.new(book['title'], book['author'])
   end
 
-  @@peopledata = @@store.read('people', "./data/people.json")
+  @@peopledata = @@store.read('people', './data/people.json')
   @@peopledata = [] if @@peopledata.nil?
   @@peopledata = @@peopledata.map do |person|
-    if person['class_name'] == 'Student'
+    case person['class_name']
+    when 'Student'
       Student.new(person['name'], person['age'], person['classroom'], person['parent_permission'], person['id'])
-    elsif person['class_name'] == 'Teacher'
+    when 'Teacher'
       Teacher.new(person['name'], person['age'], person['specialization'], person['parent_permission'], person['id'])
     end
   end
-
-  # @@rentalsdata = @@store.read('rentals', "./data/rentals.json")
-  # @@rentalsdata = [] if @@rentalsdata.nil?
-  # @@rentalsdata = @@rentalsdata.map do |rental|
-  #   Rental.new(rental['date'], rental['book'], rental['person'])
-  # end
-
 
   def initialize
     @books = @@booksdata
@@ -47,11 +41,10 @@ class App
     puts 'No books here, pick a number to create a book' if @books.empty?
     @books.each { |book| puts "[Book] Title: \"#{book.title}\", Author: \"#{book.author}\"" }
   end
-  
+
   def list_all_people
     puts 'No people here, pick a number to create a person' if @people.empty?
     @people.each do |person|
-      # binding.pry
       puts "[Student] Name: #{person.name}, Age: #{person.age}" if person.class_name == 'Student'
       puts "[Teacher] Name: #{person.name}, Age: #{person.age}" if person.class_name == 'Teacher'
     end
@@ -86,7 +79,6 @@ class App
     puts "Book made. #{title} by #{author}"
 
     @books << book
-
   end
 
   def create_rental

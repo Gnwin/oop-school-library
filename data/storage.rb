@@ -13,34 +13,3 @@ class Store
     File.write(path, data)
   end
 end
-
-# data1 = {
-#   books: [{
-#     title: "vggvgh",
-#     author: "hgfytfg"
-#   },
-#   {
-#     title: "gfjnk",
-#     author: "homjnm"
-#   },
-#   {
-#     title: "euieru",
-#     author: "gnmmtjk"
-#   },
-#   ]
-# }
-
-# {
-#   "books": [{
-#     "title": "vggvgh",
-#     "author": "hgfytfg"
-#   },
-#   {
-#     "title": "gfjnk",
-#     "author": "homjnm"
-#   },
-#   {
-#     "title": "euieru",
-#     "author": "gnmmtjk"
-#   }]
-# }

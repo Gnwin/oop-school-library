@@ -9,8 +9,6 @@ class Rental
     @book = book
     @person = person
 
-    p @book
-
     book.rentals.push(to_hash) unless book.rentals.include?(to_hash)
     person.rentals.push(to_hash) unless person.rentals.include?(to_hash)
   end

@@ -36,9 +36,6 @@ class Main
         data2 = app.people.map(&:to_hash)
         store.write('people', './data/people.json', data2)
 
-        # data3 = app.rentals.map{|rental| rental.to_hash}
-        # store.write('rentals', "./data/rentals.json", data3)
-
         puts 'Thanks for using my program. Bye!'
         user_finished = true
       else
