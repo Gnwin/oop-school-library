@@ -1,1 +1,1 @@
-{"books":[{"title":"fjfjf","author":"kgkgk","rentals":[],"person":null},{"title":"fhfhf","author":"jggh","rentals":[],"person":null}]}
+{"books":[{"title":"fjfjf","author":"kgkgk","rentals":[{"date":"7878-09-09","book":"#<Book:0x000000014a8cc7b0>","person":"#<Teacher:0x000000014a9526d0>"}],"person":null},{"title":"fhfhf","author":"jggh","rentals":[],"person":null}]}
