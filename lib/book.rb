@@ -9,4 +9,8 @@ class Book
     @rentals = []
     @person = nil
   end
+
+  def to_hash
+    { title: @title, author: @author, rentals: @rentals, person: @person }
+  end
 end

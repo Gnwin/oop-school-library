@@ -4,28 +4,49 @@ require_relative 'book'
 require_relative 'classroom'
 require_relative '../helpers/app_helper'
 require_relative 'rental'
-require 'set'
+require_relative '../data/storage'
+require 'json'
+require 'pry'
 
 class App
   include AppHelper
   attr_accessor :books, :people, :rentals
 
+  @@store = Store.new
+
+  @@booksdata = @@store.read('books', './data/books.json')
+  @@booksdata = [] if @@booksdata.nil?
+  @@booksdata = @@booksdata.map do |book|
+    Book.new(book['title'], book['author'])
+  end
+
+  @@peopledata = @@store.read('people', './data/people.json')
+  @@peopledata = [] if @@peopledata.nil?
+  @@peopledata = @@peopledata.map do |person|
+    case person['class_name']
+    when 'Student'
+      Student.new(person['name'], person['age'], person['classroom'], person['parent_permission'], person['id'])
+    when 'Teacher'
+      Teacher.new(person['name'], person['age'], person['specialization'], person['parent_permission'], person['id'])
+    end
+  end
+
   def initialize
-    @books = []
-    @people = []
+    @books = @@booksdata
+    @people = @@peopledata
     @rentals = []
   end
 
   def list_all_books
     puts 'No books here, pick a number to create a book' if @books.empty?
-    @books.each { |book| puts "Title: \"#{book.title}\", Author: \"#{book.author}\"" }
+    @books.each { |book| puts "[Book] Title: \"#{book.title}\", Author: \"#{book.author}\"" }
   end
 
   def list_all_people
     puts 'No people here, pick a number to create a person' if @people.empty?
     @people.each do |person|
-      puts "[Student] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" if person.is_a?(Student)
-      puts "[Teacher] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" if person.is_a?(Teacher)
+      puts "[Student] Name: #{person.name}, Age: #{person.age}" if person.class_name == 'Student'
+      puts "[Teacher] Name: #{person.name}, Age: #{person.age}" if person.class_name == 'Teacher'
     end
   end
 
@@ -40,7 +61,7 @@ class App
 
     if class_name == 'Teacher'
       teacher = Teacher.new(name, age, specialty)
-      puts "Created Teacher Name: #{name} Age: #{age} Specialty: #{specialty}"
+      puts "Created Teacher Name: #{name} Age: #{age} Specialty: #{specialty} ID: #{teacher.id}"
       @people << teacher
     else
       student = Student.new(name, age, '', permission)
@@ -56,6 +77,7 @@ class App
     author = gets.chomp
     book = Book.new(title, author)
     puts "Book made. #{title} by #{author}"
+
     @books << book
   end
 

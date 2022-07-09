@@ -8,7 +8,7 @@ This setup and run procedure assumes you have Ruby installed.
 
 - clone the repository `$ git clone https://github.com/Gnwin/oop-school-library.git`
 - go to the project directory `$ cd oop-school-library`
-- switch to branch with `git checkout f/refactor`
+- switch to branch with `git checkout f/preserve-data`
 - run the command `ruby bin/main.rb`
 
 ## Author

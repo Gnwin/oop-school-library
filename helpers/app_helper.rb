@@ -2,6 +2,7 @@ require_relative '../lib/student'
 require_relative '../lib/teacher'
 require_relative '../lib/book'
 require_relative '../lib/classroom'
+require 'set'
 
 module AppHelper
   def confirm_class
