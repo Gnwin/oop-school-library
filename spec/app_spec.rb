@@ -1,4 +1,4 @@
-require_relative '../lib/app.rb'
+require_relative '../lib/app'
 require_relative '../data/storage'
 
 RSpec.describe App do

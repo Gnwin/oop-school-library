@@ -1,4 +1,4 @@
-require_relative '../lib/book.rb'
+require_relative '../lib/book'
 
 RSpec.describe Book do
   context 'When testing Book class' do

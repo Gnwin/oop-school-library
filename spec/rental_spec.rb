@@ -1,4 +1,4 @@
-require_relative '../lib/rental.rb'
+require_relative '../lib/rental'
 
 RSpec.describe Rental do
   context 'Testing Rental class' do

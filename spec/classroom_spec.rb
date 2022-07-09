@@ -1,4 +1,4 @@
-require_relative '../lib/classroom.rb'
+require_relative '../lib/classroom'
 
 RSpec.describe Classroom do
   context 'Testing classroom class' do

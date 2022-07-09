@@ -1,9 +1,9 @@
-require_relative '../lib/student.rb'
+require_relative '../lib/student'
 
 RSpec.describe Student do
   context 'Testing student class' do
     before :each do
-      @student = Student.new('Godwin', 34, "", true)
+      @student = Student.new('Godwin', 34, '', true)
     end
 
     it 'returns instance of student' do

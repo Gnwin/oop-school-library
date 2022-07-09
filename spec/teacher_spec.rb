@@ -1,5 +1,5 @@
-require_relative '../lib/teacher.rb'
-require_relative '../lib/person.rb'
+require_relative '../lib/teacher'
+require_relative '../lib/person'
 
 RSpec.describe Teacher do
   context 'Testing teacher class' do
