@@ -11,6 +11,17 @@ This setup and run procedure assumes you have Ruby installed.
 - switch to branch with `git checkout f/unit-tests`
 - run the command `ruby bin/main.rb`
 
+## Built With
+
+- Ruby
+
+## Testing
+
+- clone the repository with this command `$ git clone https://github.com/Gnwin/oop-school-library.git`
+- switch to test branch with this command `git checkout f/unit-tests`
+- at the root level of the project run the command `rspec`
+- see test results in the terminal
+
 ## Author
 
 👤 **Godwin Nwachukwu**
